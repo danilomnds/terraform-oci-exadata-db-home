@@ -88,10 +88,9 @@ output "exadata-id" {
 | freeform_tags | Free-form tags for this resource | `map(string)` | n/a | No |
 | source | The source of database: NONE for creating a new database. DB_BACKUP for creating a new database by restoring from a database backup. VM_CLUSTER_NEW for creating a database for VM Cluster | `string` | n/a | No |
 | vm_cluster_id | (Required when source=VM_CLUSTER_BACKUP | VM_CLUSTER_NEW) The OCID of the VM cluster | `string` | n/a | No |
-| groups | list of azure AD groups that will manage objects inside the bucket | `list(string)` | n/a | No |
+| groups | list of azure AD groups that will manage objects inside the bucket | `list(string)` | `[]` | No |
 | compartment_id | the ocid of the compartment. It should be specified if you are going to create an access policy | `string` | n/a | No |
 | compartment | compartment name that will be used for policy creation | `string` | n/a | No |
-| enable_group_access | enables the policy creation. If true the groups var should have a least one value | `bool` | `true` | No |
 
 # Object variables for blocks
 
